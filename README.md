@@ -18,5 +18,4 @@ Of my white fountain what it did replace
 Perceptually was something that, I felt,
 Could be grasped only by whoever dwelt
 In the strange world where I was a mere stray.
-...
 ```
