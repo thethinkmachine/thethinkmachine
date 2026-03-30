@@ -1,63 +1,160 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="823" viewBox="0 0 1060 823">
-  <rect width="1060" height="823" rx="10" fill="#0d1117"/>
-  <rect width="1060" height="823" rx="10" fill="none" stroke="#30363d" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="839" viewBox="0 0 1060 839">
+  <rect width="1060" height="839" rx="10" fill="#0d1117"/>
+  <rect width="1060" height="839" rx="10" fill="none" stroke="#30363d" stroke-width="1.5"/>
   <line x1="22" y1="369" x2="1038" y2="369" stroke="#30363d" stroke-width="1"/>
-  <text x="22" y="35" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      .:-*%@@@@@@@@@:::::::::... .    .......             ..:::::+#=#@@@@@</text>
-  <text x="22" y="48" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      ..............  ...........     ......:==:=:.....    ...::::-#@@@@@@</text>
-  <text x="22" y="61" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      ........ ...     ..   ..            ..=%@@@@@@@@@%%...:...:::::-@@@@   -@@@@@@@@@.:@@</text>
-  <text x="22" y="74" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      .......                           -:.:+@@@@@@@@@@%.:..:.....::.:-*@@       +@.     @@</text>
-  <text x="22" y="87" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      .......                       .-**--*@@@@@@@@@@@@%::-... ..:..::@=@@       +@.     @@. -@= :@   @@</text>
-  <text x="22" y="100" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      .....                       :+:....:-=+%@@@@@@@@@@@@*=+.   ...::@@@@       +@.     @@   @# @@</text>
-  <text x="22" y="113" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      ....                     :*+--===++=--=+-.:%@@@@@#=-:::::: ...::@@@@       +@:     @@   @%  @@@@@.</text>
-  <text x="22" y="126" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                              ...:-+%@@@@@@@@@@@=%@@@@+=======-    .:.:-#@</text>
-  <text x="22" y="139" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                     .##*    -###*-#@@:  *@@@@@@==**-=+::=%@@@+--: ..::#@@</text>
-  <text x="22" y="152" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                    -###*=   .###%+#@@@@@@@@@@#+*@@@@*@=-@@@@-::.  ..%:=@@</text>
-  <text x="22" y="165" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                    -####*+. .##%@@@*#@@@@@@@%+@@@@@@@@@@@@@@-+:   .*@=@@@   #@  %@= .@= @@       .*           *@:</text>
-  <text x="22" y="178" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                     =####*.  *##@@@@@@@@@@@@@@@@@@@@@@%####+.  ...*@@@@@@       +@.     @@ *@-   =*  .*-.%@   :@:  *-</text>
-  <text x="22" y="191" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                      .-*#*:  -##%@@@@@@@@@@@@@%%%%%%@@@@@@@%    ..:%@@@@@       +@.     @@   @*  @@   @%  #@  :@*%=</text>
-  <text x="22" y="204" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                         .+-  .:*#@@@@%-::.........:.:-=%@@@:  ..::-@@@@@@       +@.     @@   @#  @@   @#  *@  :@+@@</text>
-  <text x="22" y="217" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                         .*+.    .:#@=..*@@@@@@@@@@@@#-..@%:  . .::+@@@@@@      =@@@-   -@@- #@@ :@@* #@@ :@@#-@@@ =@@+</text>
-  <text x="22" y="230" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                         :=##.      ...+@@@@@@%###%@@@@-::.       *@@@@@@@</text>
-  <text x="22" y="243" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                       .#######*:     ..:-%#%-::.:+@@+-:..  .....:%@@@@@@@</text>
-  <text x="22" y="256" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                       -###########=.    ..........:...   ........:=@@@@@@                                    .        .</text>
-  <text x="22" y="269" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">                          .+###########-..     . ..  :::.  ........:*@@@@@     @@@      @@@                  =@</text>
-  <text x="22" y="282" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      .....                    -+################@= .:---:..... ...::#@@@@     @ @@    @ @@   @@:@@   #@-@@  =@+@@@+  @@- :@@=@@@   -@-@@=</text>
-  <text x="22" y="295" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      ..............                .=+*#####%@@@= .-----: ..........-%@@@     @  @@ .@  @@    :-@@  @%      =@   @@  :@-  @@   @* #@+===-</text>
-  <text x="22" y="308" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      .....................               ......   ::-:-:..............:%@     @   @@@   @@  @@  *@  @@+  :+ =@   @@  :@-  @@   @# :@@   =</text>
-  <text x="22" y="321" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      ... ......................          .       .:::::: ........... ...-</text>
-  <text x="22" y="334" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      ..... ...  ...................  . ..    .. .::::::..................</text>
-  <text x="22" y="347" font-family="monospace" font-size="10" fill="#e8943a" font-weight="normal" xml:space="preserve">      ......  .    ..  . .........     .:.#@%#*-:::::::-::-...-#...  .....</text>
-  <text x="22" y="411" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#57c464" font-weight="bold">thethinkmachine</tspan><tspan fill="#8b949e">@github</tspan></text>
-  <text x="552" y="411" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#8b949e">synced: 2026-03-30 22:32 UTC</tspan></text>
-  <text x="22" y="435" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#8b949e">- </tspan><tspan fill="#e8943a" font-weight="bold">System </tspan><tspan fill="#8b949e">───</tspan></text>
-  <text x="22" y="455" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">OS</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.................... </tspan><tspan fill="#c9d1d9">Linux, Windows</tspan></text>
-  <text x="22" y="475" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Host</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.. </tspan><tspan fill="#c9d1d9">Indian Institute of Technology, Madras (IIT-M)</tspan></text>
-  <text x="22" y="495" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">IDE</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">........................... </tspan><tspan fill="#c9d1d9">VSCode</tspan></text>
-  <text x="22" y="521" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#8b949e">- </tspan><tspan fill="#e8943a" font-weight="bold">Languages </tspan><tspan fill="#8b949e">───</tspan></text>
-  <text x="22" y="541" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Languages.Code</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.. </tspan><tspan fill="#c9d1d9">Java, Python, JavaScript, TypeScript</tspan></text>
-  <text x="22" y="561" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Languages.Markup</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.. </tspan><tspan fill="#c9d1d9">HTML, CSS, JSON, YAML, TOML, Markdown</tspan></text>
-  <text x="22" y="581" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Languages.Real</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">........ </tspan><tspan fill="#c9d1d9">English, Hindi</tspan></text>
-  <text x="22" y="607" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#8b949e">- </tspan><tspan fill="#e8943a" font-weight="bold">Hobbies </tspan><tspan fill="#8b949e">───</tspan></text>
-  <text x="22" y="627" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Hobbies.Software</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.. </tspan><tspan fill="#c9d1d9">Building stuff that I find useful</tspan></text>
-  <text x="22" y="647" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Hobbies.Other</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.. </tspan><tspan fill="#c9d1d9">Gaming, Coding, Music</tspan></text>
-  <text x="22" y="673" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#8b949e">- </tspan><tspan fill="#e8943a" font-weight="bold">Interests </tspan><tspan fill="#8b949e">───</tspan></text>
-  <text x="22" y="693" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Interests.Subjective</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.. </tspan><tspan fill="#c9d1d9">Quantum Computing, Deep Learning, Representation Learning, All things LLMs</tspan></text>
-  <text x="22" y="713" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Interests.Other</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.. </tspan><tspan fill="#c9d1d9">Mathematics, Physics and Economics</tspan></text>
-  <text x="552" y="435" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#8b949e">- </tspan><tspan fill="#e8943a" font-weight="bold">Contact </tspan><tspan fill="#8b949e">───</tspan></text>
-  <text x="552" y="455" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Contact.Discord</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">............ </tspan><tspan fill="#c9d1d9">shreyan.c</tspan></text>
-  <text x="552" y="475" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Contact.Steam</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.......... </tspan><tspan fill="#c9d1d9">ThinkMachine_</tspan></text>
-  <text x="552" y="495" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Contact.Xbox</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">......... </tspan><tspan fill="#c9d1d9">ThinkMachine543</tspan></text>
-  <text x="552" y="515" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Contact.Other</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">........ </tspan><tspan fill="#c9d1d9">[EMAIL_ADDRESS]</tspan></text>
-  <text x="552" y="541" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#8b949e">- </tspan><tspan fill="#e8943a" font-weight="bold">GitHub Stats </tspan><tspan fill="#8b949e">───</tspan></text>
-  <text x="552" y="561" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Repos</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">... </tspan><tspan fill="#c9d1d9">20  |  Stars: 4  |  Forks: 0</tspan></text>
-  <text x="552" y="581" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Commits</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">.......................... </tspan><tspan fill="#c9d1d9">162</tspan></text>
-  <text x="552" y="601" font-family="monospace" font-size="13" fill="#c9d1d9" font-weight="normal" xml:space="preserve"><tspan fill="#e8943a">Followers</tspan><tspan fill="#8b949e">: </tspan><tspan fill="#8b949e">........ </tspan><tspan fill="#c9d1d9">3  |  Following: 15</tspan></text>
-  <rect x="552" y="629" width="22" height="14" rx="3" fill="#ff5f56"/>
-  <rect x="578" y="629" width="22" height="14" rx="3" fill="#ffbd2e"/>
-  <rect x="604" y="629" width="22" height="14" rx="3" fill="#27c93f"/>
-  <rect x="630" y="629" width="22" height="14" rx="3" fill="#1d76fd"/>
-  <rect x="656" y="629" width="22" height="14" rx="3" fill="#b479e8"/>
-  <rect x="682" y="629" width="22" height="14" rx="3" fill="#e8943a"/>
-  <rect x="708" y="629" width="22" height="14" rx="3" fill="#57c464"/>
-  <rect x="734" y="629" width="22" height="14" rx="3" fill="#8b949e"/>
+  <text x="22" y="35" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      .:-*%@@@@@@@@@:::::::::... .    .......             ..:::::+#=#@@@@@</text>
+  <text x="22" y="48" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      ..............  ...........     ......:==:=:.....    ...::::-#@@@@@@</text>
+  <text x="22" y="61" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      ........ ...     ..   ..            ..=%@@@@@@@@@%%...:...:::::-@@@@   -@@@@@@@@@.:@@</text>
+  <text x="22" y="74" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      .......                           -:.:+@@@@@@@@@@%.:..:.....::.:-*@@       +@.     @@</text>
+  <text x="22" y="87" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      .......                       .-**--*@@@@@@@@@@@@%::-... ..:..::@=@@       +@.     @@. -@= :@   @@</text>
+  <text x="22" y="100" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      .....                       :+:....:-=+%@@@@@@@@@@@@*=+.   ...::@@@@       +@.     @@   @# @@</text>
+  <text x="22" y="113" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      ....                     :*+--===++=--=+-.:%@@@@@#=-:::::: ...::@@@@       +@:     @@   @%  @@@@@.</text>
+  <text x="22" y="126" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                              ...:-+%@@@@@@@@@@@=%@@@@+=======-    .:.:-#@</text>
+  <text x="22" y="139" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                     .##*    -###*-#@@:  *@@@@@@==**-=+::=%@@@+--: ..::#@@</text>
+  <text x="22" y="152" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                    -###*=   .###%+#@@@@@@@@@@#+*@@@@*@=-@@@@-::.  ..%:=@@</text>
+  <text x="22" y="165" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                    -####*+. .##%@@@*#@@@@@@@%+@@@@@@@@@@@@@@-+:   .*@=@@@   #@  %@= .@= @@       .*           *@:</text>
+  <text x="22" y="178" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                     =####*.  *##@@@@@@@@@@@@@@@@@@@@@@%####+.  ...*@@@@@@       +@.     @@ *@-   =*  .*-.%@   :@:  *-</text>
+  <text x="22" y="191" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                      .-*#*:  -##%@@@@@@@@@@@@@%%%%%%@@@@@@@%    ..:%@@@@@       +@.     @@   @*  @@   @%  #@  :@*%=</text>
+  <text x="22" y="204" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                         .+-  .:*#@@@@%-::.........:.:-=%@@@:  ..::-@@@@@@       +@.     @@   @#  @@   @#  *@  :@+@@</text>
+  <text x="22" y="217" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                         .*+.    .:#@=..*@@@@@@@@@@@@#-..@%:  . .::+@@@@@@      =@@@-   -@@- #@@ :@@* #@@ :@@#-@@@ =@@+</text>
+  <text x="22" y="230" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                         :=##.      ...+@@@@@@%###%@@@@-::.       *@@@@@@@</text>
+  <text x="22" y="243" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                       .#######*:     ..:-%#%-::.:+@@+-:..  .....:%@@@@@@@</text>
+  <text x="22" y="256" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                       -###########=.    ..........:...   ........:=@@@@@@                                    .        .</text>
+  <text x="22" y="269" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">                          .+###########-..     . ..  :::.  ........:*@@@@@     @@@      @@@                  =@</text>
+  <text x="22" y="282" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      .....                    -+################@= .:---:..... ...::#@@@@     @ @@    @ @@   @@:@@   #@-@@  =@+@@@+  @@- :@@=@@@   -@-@@=</text>
+  <text x="22" y="295" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      ..............                .=+*#####%@@@= .-----: ..........-%@@@     @  @@ .@  @@    :-@@  @%      =@   @@  :@-  @@   @* #@+===-</text>
+  <text x="22" y="308" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      .....................               ......   ::-:-:..............:%@     @   @@@   @@  @@  *@  @@+  :+ =@   @@  :@-  @@   @# :@@   =</text>
+  <text x="22" y="321" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      ... ......................          .       .:::::: ........... ...-</text>
+  <text x="22" y="334" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      ..... ...  ...................  . ..    .. .::::::..................</text>
+  <text x="22" y="347" font-family="monospace" font-size="10" fill="#e8943a" xml:space="preserve">      ......  .    ..  . .........     .:.#@%#*-:::::::-::-...-#...  .....</text>
+  <text x="22" y="407" font-family="monospace" font-size="13" xml:space="preserve"><tspan fill="#57c464" font-weight="bold">thethinkmachine</tspan><tspan fill="#8b949e">@github</tspan></text>
+  <text x="541" y="407" font-family="monospace" font-size="12" fill="#8b949e" xml:space="preserve">synced: 2026-03-30 22:47 UTC</text>
+  <rect x="22" y="421" width="497" height="344" rx="4" fill="none" stroke="#30363d" stroke-width="1"/>
+  <rect x="22" y="421" width="497" height="26" fill="#161b22" rx="0"/>
+  <line x1="22" y1="447" x2="519" y2="447" stroke="#30363d" stroke-width="1"/>
+  <text x="32" y="439" font-family="monospace" font-size="12" fill="#e8943a" font-weight="bold" xml:space="preserve">System</text>
+  <rect x="22" y="447" width="497" height="24" fill="#0d1117"/>
+  <line x1="22" y1="471" x2="519" y2="471" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="447" x2="212" y2="471" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="464" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">OS</text>
+  <text x="222" y="464" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">Linux, Windows</text>
+  <rect x="22" y="471" width="497" height="24" fill="#161b22"/>
+  <line x1="22" y1="495" x2="519" y2="495" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="471" x2="212" y2="495" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="488" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Host</text>
+  <text x="222" y="488" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">Indian Institute of Technology, Madras (IIT-M)</text>
+  <rect x="22" y="495" width="497" height="24" fill="#0d1117"/>
+  <line x1="22" y1="519" x2="519" y2="519" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="495" x2="212" y2="519" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="512" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">IDE</text>
+  <text x="222" y="512" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">VSCode</text>
+  <rect x="22" y="519" width="497" height="26" fill="#161b22" rx="0"/>
+  <line x1="22" y1="545" x2="519" y2="545" stroke="#30363d" stroke-width="1"/>
+  <text x="32" y="537" font-family="monospace" font-size="12" fill="#e8943a" font-weight="bold" xml:space="preserve">Languages</text>
+  <rect x="22" y="545" width="497" height="24" fill="#0d1117"/>
+  <line x1="22" y1="569" x2="519" y2="569" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="545" x2="212" y2="569" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="562" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Languages.Code</text>
+  <text x="222" y="562" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">Java, Python, JavaScript, TypeScript</text>
+  <rect x="22" y="569" width="497" height="24" fill="#161b22"/>
+  <line x1="22" y1="593" x2="519" y2="593" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="569" x2="212" y2="593" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="586" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Languages.Markup</text>
+  <text x="222" y="586" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">HTML, CSS, JSON, YAML, TOML, Markdown</text>
+  <rect x="22" y="593" width="497" height="24" fill="#0d1117"/>
+  <line x1="22" y1="617" x2="519" y2="617" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="593" x2="212" y2="617" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="610" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Languages.Real</text>
+  <text x="222" y="610" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">English, Hindi</text>
+  <rect x="22" y="617" width="497" height="26" fill="#161b22" rx="0"/>
+  <line x1="22" y1="643" x2="519" y2="643" stroke="#30363d" stroke-width="1"/>
+  <text x="32" y="635" font-family="monospace" font-size="12" fill="#e8943a" font-weight="bold" xml:space="preserve">Hobbies</text>
+  <rect x="22" y="643" width="497" height="24" fill="#0d1117"/>
+  <line x1="22" y1="667" x2="519" y2="667" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="643" x2="212" y2="667" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="660" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Hobbies.Software</text>
+  <text x="222" y="660" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">Building stuff that I find useful</text>
+  <rect x="22" y="667" width="497" height="24" fill="#161b22"/>
+  <line x1="22" y1="691" x2="519" y2="691" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="667" x2="212" y2="691" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="684" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Hobbies.Other</text>
+  <text x="222" y="684" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">Gaming, Coding, Music</text>
+  <rect x="22" y="691" width="497" height="26" fill="#161b22" rx="0"/>
+  <line x1="22" y1="717" x2="519" y2="717" stroke="#30363d" stroke-width="1"/>
+  <text x="32" y="709" font-family="monospace" font-size="12" fill="#e8943a" font-weight="bold" xml:space="preserve">Interests</text>
+  <rect x="22" y="717" width="497" height="24" fill="#0d1117"/>
+  <line x1="22" y1="741" x2="519" y2="741" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="717" x2="212" y2="741" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="734" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Interests.Subjective</text>
+  <text x="222" y="734" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">QC, DL, RL, LLMs</text>
+  <rect x="22" y="741" width="497" height="24" fill="#161b22"/>
+  <line x1="22" y1="765" x2="519" y2="765" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="212" y1="741" x2="212" y2="765" stroke="#30363d" stroke-width="0.5"/>
+  <text x="32" y="758" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Interests.Other</text>
+  <text x="222" y="758" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">Mathematics, Physics and Economics</text>
+  <rect x="541" y="421" width="497" height="292" rx="4" fill="none" stroke="#30363d" stroke-width="1"/>
+  <rect x="541" y="421" width="497" height="26" fill="#161b22" rx="0"/>
+  <line x1="541" y1="447" x2="1038" y2="447" stroke="#30363d" stroke-width="1"/>
+  <text x="551" y="439" font-family="monospace" font-size="12" fill="#e8943a" font-weight="bold" xml:space="preserve">Contact</text>
+  <rect x="541" y="447" width="497" height="24" fill="#0d1117"/>
+  <line x1="541" y1="471" x2="1038" y2="471" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="447" x2="731" y2="471" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="464" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Contact.Discord</text>
+  <text x="741" y="464" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">shreyan.c</text>
+  <rect x="541" y="471" width="497" height="24" fill="#161b22"/>
+  <line x1="541" y1="495" x2="1038" y2="495" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="471" x2="731" y2="495" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="488" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Contact.Steam</text>
+  <text x="741" y="488" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">ThinkMachine_</text>
+  <rect x="541" y="495" width="497" height="24" fill="#0d1117"/>
+  <line x1="541" y1="519" x2="1038" y2="519" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="495" x2="731" y2="519" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="512" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Contact.Xbox</text>
+  <text x="741" y="512" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">ThinkMachine543</text>
+  <rect x="541" y="519" width="497" height="24" fill="#161b22"/>
+  <line x1="541" y1="543" x2="1038" y2="543" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="519" x2="731" y2="543" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="536" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Contact.Other</text>
+  <text x="741" y="536" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">shreyan.chaubey@gmail(dot)com</text>
+  <rect x="541" y="543" width="497" height="26" fill="#161b22" rx="0"/>
+  <line x1="541" y1="569" x2="1038" y2="569" stroke="#30363d" stroke-width="1"/>
+  <text x="551" y="561" font-family="monospace" font-size="12" fill="#e8943a" font-weight="bold" xml:space="preserve">GitHub Stats</text>
+  <rect x="541" y="569" width="497" height="24" fill="#0d1117"/>
+  <line x1="541" y1="593" x2="1038" y2="593" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="569" x2="731" y2="593" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="586" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Repos</text>
+  <text x="741" y="586" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">20</text>
+  <rect x="541" y="593" width="497" height="24" fill="#161b22"/>
+  <line x1="541" y1="617" x2="1038" y2="617" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="593" x2="731" y2="617" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="610" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Stars</text>
+  <text x="741" y="610" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">4</text>
+  <rect x="541" y="617" width="497" height="24" fill="#0d1117"/>
+  <line x1="541" y1="641" x2="1038" y2="641" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="617" x2="731" y2="641" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="634" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Forks</text>
+  <text x="741" y="634" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">0</text>
+  <rect x="541" y="641" width="497" height="24" fill="#161b22"/>
+  <line x1="541" y1="665" x2="1038" y2="665" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="641" x2="731" y2="665" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="658" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Commits</text>
+  <text x="741" y="658" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">163</text>
+  <rect x="541" y="665" width="497" height="24" fill="#0d1117"/>
+  <line x1="541" y1="689" x2="1038" y2="689" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="665" x2="731" y2="689" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="682" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Followers</text>
+  <text x="741" y="682" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">3</text>
+  <rect x="541" y="689" width="497" height="24" fill="#161b22"/>
+  <line x1="541" y1="713" x2="1038" y2="713" stroke="#30363d" stroke-width="0.5"/>
+  <line x1="731" y1="689" x2="731" y2="713" stroke="#30363d" stroke-width="0.5"/>
+  <text x="551" y="706" font-family="monospace" font-size="12" fill="#e8943a" xml:space="preserve">Following</text>
+  <text x="741" y="706" font-family="monospace" font-size="12" fill="#c9d1d9" xml:space="preserve">15</text>
+  <rect x="541" y="723" width="22" height="14" rx="3" fill="#ff5f56"/>
+  <rect x="567" y="723" width="22" height="14" rx="3" fill="#ffbd2e"/>
+  <rect x="593" y="723" width="22" height="14" rx="3" fill="#27c93f"/>
+  <rect x="619" y="723" width="22" height="14" rx="3" fill="#1d76fd"/>
+  <rect x="645" y="723" width="22" height="14" rx="3" fill="#b479e8"/>
+  <rect x="671" y="723" width="22" height="14" rx="3" fill="#e8943a"/>
+  <rect x="697" y="723" width="22" height="14" rx="3" fill="#57c464"/>
+  <rect x="723" y="723" width="22" height="14" rx="3" fill="#8b949e"/>
 </svg>
