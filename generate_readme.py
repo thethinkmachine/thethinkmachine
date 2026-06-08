@@ -5,49 +5,6 @@ import datetime
 GITHUB_USERNAME = "thethinkmachine"
 GITHUB_TOKEN    = os.environ.get("GITHUB_TOKEN", "")
 
-INFO = {
-    "OS"                   : "Linux, Windows",
-    "Host"                 : "Indian Institute of Technology, Madras (IIT-M)",
-    "IDE"                  : "VSCode",
-    "Languages.Code"       : "Java, Python, JavaScript, TypeScript",
-    "Languages.Markup"     : "HTML, CSS, JSON, YAML, TOML, Markdown",
-    "Languages.Real"       : "English, Hindi",
-    "Hobbies.Software"     : "Building stuff that I find useful",
-    "Hobbies.Other"        : "Gaming, Coding, Music",
-    "Interests.Subjective" : "QC, DL, RL, LLMs",
-    "Interests.Other"      : "Mathematics, Physics and Economics",
-    "Contact.Discord"      : "shreyan.c",
-    "Contact.Steam"        : "ThinkMachine_",
-    "Contact.Xbox"         : "ThinkMachine543",
-    "Contact.Other"        : "shreyan.chaubey@gmail(dot)com",
-}
-
-ASCII_ART = """      .:-*%@@@@@@@@@:::::::::... .    .......             ..:::::+#=#@@@@@
-      ..............  ...........     ......:==:=:.....    ...::::-#@@@@@@
-      ........ ...     ..   ..            ..=%@@@@@@@@@%%...:...:::::-@@@@   -@@@@@@@@@.:@@
-      .......                           -:.:+@@@@@@@@@@%.:..:.....::.:-*@@       +@.     @@
-      .......                       .-**--*@@@@@@@@@@@@%::-... ..:..::@=@@       +@.     @@. -@= :@   @@
-      .....                       :+:....:-=+%@@@@@@@@@@@@*=+.   ...::@@@@       +@.     @@   @# @@
-      ....                     :*+--===++=--=+-.:%@@@@@#=-:::::: ...::@@@@       +@:     @@   @%  @@@@@.
-                              ...:-+%@@@@@@@@@@@=%@@@@+=======-    .:.:-#@
-                     .##*    -###*-#@@:  *@@@@@@==**-=+::=%@@@+--: ..::#@@
-                    -###*=   .###%+#@@@@@@@@@@#+*@@@@*@=-@@@@-::.  ..%:=@@
-                    -####*+. .##%@@@*#@@@@@@@%+@@@@@@@@@@@@@@-+:   .*@=@@@   #@  %@= .@= @@       .*           *@:
-                     =####*.  *##@@@@@@@@@@@@@@@@@@@@@@%####+.  ...*@@@@@@       +@.     @@ *@-   =*  .*-.%@   :@:  *-
-                      .-*#*:  -##%@@@@@@@@@@@@@%%%%%%@@@@@@@%    ..:%@@@@@       +@.     @@   @*  @@   @%  #@  :@*%=
-                         .+-  .:*#@@@@%-::.........:.:-=%@@@:  ..::-@@@@@@       +@.     @@   @#  @@   @#  *@  :@+@@
-                         .*+.    .:#@=..*@@@@@@@@@@@@#-..@%:  . .::+@@@@@@      =@@@-   -@@- #@@ :@@* #@@ :@@#-@@@ =@@+
-                         :=##.      ...+@@@@@@%###%@@@@-::.       *@@@@@@@
-                       .#######*:     ..:-%#%-::.:+@@+-:..  .....:%@@@@@@@
-                       -###########=.    ..........:...   ........:=@@@@@@                                    .        .
-                          .+###########-..     . ..  :::.  ........:*@@@@@     @@@      @@@                  =@
-      .....                    -+################@= .:---:..... ...::#@@@@     @ @@    @ @@   @@:@@   #@-@@  =@+@@@+  @@- :@@=@@@   -@-@@=
-      ..............                .=+*#####%@@@= .-----: ..........-%@@@     @  @@ .@  @@    :-@@  @%      =@   @@  :@-  @@   @* #@+===-
-      .....................               ......   ::-:-:..............:%@     @   @@@   @@  @@  *@  @@+  :+ =@   @@  :@-  @@   @# :@@   =
-      ... ......................          .       .:::::: ........... ...-
-      ..... ...  ...................  . ..    .. .::::::..................
-      ......  .    ..  . .........     .:.#@%#*-:::::::-::-...-#...  ....."""
-
 # ── Styling ───────────────────────────────────────────────────────────────────
 FONT      = "monospace"
 BG        = "#0d1117"
@@ -58,67 +15,111 @@ ACCENT2   = "#57c464"   # green  — username / highlight
 DIM       = "#8b949e"   # grey   — secondary text
 FG        = "#c9d1d9"   # white  — values
 
-ART_LH    = 13
-ART_FS    = 10
-W         = 1060
-PAD       = 22
+W         = 920
+PAD       = 24
+HEADER_H  = 50
 
 ROW_H     = 24          # table row height
 HDR_H     = 26          # section header row height
 FS        = 12          # table font size
-KEY_W     = 190         # width of key column inside each table
-TITLE_H   = 30          # title bar height
+KEY_W     = 100         # width of key column inside each table
+
+POEM_FS   = 12          # poem line font size
+POEM_LH   = 19          # poem line height
+
+POEM_TITLE  = "Ozymandias"
+POEM_AUTHOR = "Percy Bysshe Shelley"
+POEM_LINES  = [
+    "I met a traveller from an antique land",
+    "Who said: Two vast and trunkless legs of stone",
+    "Stand in the desert. Near them, on the sand,",
+    "Half sunk, a shattered visage lies, whose frown,",
+    "And wrinkled lip, and sneer of cold command,",
+    "Tell that its sculptor well those passions read",
+    "Which yet survive, stamped on these lifeless things,",
+    "The hand that mocked them, and the heart that fed:",
+    "And on the pedestal these words appear:",
+    "‘My name is Ozymandias, king of kings:",
+    "Look on my works, ye Mighty, and despair!’",
+    "Nothing beside remains. Round the decay",
+    "Of that colossal wreck, boundless and bare",
+    "The lone and level sands stretch far away.",
+]
+
 
 def esc(s):
-    return str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def relative_time(iso_ts):
+    try:
+        dt = datetime.datetime.strptime(iso_ts, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=datetime.timezone.utc)
+    except (ValueError, TypeError):
+        return "?"
+    days = (datetime.datetime.now(datetime.timezone.utc) - dt).days
+    if days < 1:
+        return "today"
+    if days == 1:
+        return "yesterday"
+    if days < 30:
+        return f"{days}d ago"
+    months = days // 30
+    if months < 12:
+        return f"{months}mo ago"
+    return f"{months // 12}y ago"
+
 
 def fetch_stats():
     headers = {"Accept": "application/vnd.github+json"}
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+
     def gh(url):
         r = requests.get(url, headers=headers)
         return r.json() if r.ok else {}
+
     user = gh(f"https://api.github.com/users/{GITHUB_USERNAME}")
     repos, page = [], 1
     while True:
-        b = gh(f"https://api.github.com/users/{GITHUB_USERNAME}/repos?per_page=100&page={page}")
-        if not b or not isinstance(b, list): break
-        repos.extend(b)
-        if len(b) < 100: break
+        batch = gh(f"https://api.github.com/users/{GITHUB_USERNAME}/repos?per_page=100&page={page}")
+        if not batch or not isinstance(batch, list):
+            break
+        repos.extend(batch)
+        if len(batch) < 100:
+            break
         page += 1
     search = gh(f"https://api.github.com/search/commits?q=author:{GITHUB_USERNAME}&per_page=1")
+
+    # Skip the profile-readme repo itself (named after the user, pushed daily by this script)
+    candidates = [r for r in repos if r.get("name") != GITHUB_USERNAME] or repos
+    latest = max(candidates, key=lambda r: r.get("pushed_at", ""), default={})
+
     return dict(
-        repos    = user.get("public_repos","?"),
-        stars    = sum(r.get("stargazers_count",0) for r in repos),
-        forks    = sum(r.get("forks_count",0)      for r in repos),
-        followers= user.get("followers","?"),
-        following= user.get("following","?"),
-        commits  = search.get("total_count","?"),
+        repos        = user.get("public_repos", "?"),
+        stars        = sum(r.get("stargazers_count", 0) for r in repos),
+        forks        = sum(r.get("forks_count", 0) for r in repos),
+        commits      = search.get("total_count", "?"),
+        latest_repo  = latest.get("name", "?"),
+        latest_lang  = latest.get("language") or "—",
+        latest_stars = latest.get("stargazers_count", 0),
+        latest_pushed= relative_time(latest.get("pushed_at")),
     )
+
 
 def build_table(els, x, y, table_w, sections):
     """
     Draw a bordered table with section headers and key/value rows.
     sections = [("Section Name", [("Key", "Value"), ...]), ...]
-    Returns the final y after the table.
+    Returns the y coordinate of the table's bottom edge.
     """
-    # Count total rows to know full height
-    total_h = 0
-    for (sec, rows) in sections:
-        total_h += HDR_H
-        total_h += ROW_H * len(rows)
+    total_h = sum(HDR_H + ROW_H * len(rows) for _, rows in sections)
 
-    # Outer border
     els.append(f'<rect x="{x}" y="{y}" width="{table_w}" height="{total_h}" '
                f'rx="4" fill="none" stroke="{BORDER}" stroke-width="1"/>')
 
     cy = y
-    for idx_s, (sec_name, rows) in enumerate(sections):
-        # Section header row
-        els.append(f'<rect x="{x}" y="{cy}" width="{table_w}" height="{HDR_H}" '
-                   f'fill="{ROW_ALT}" rx="0"/>')
-        # Section header border bottom
+    for sec_name, rows in sections:
+        els.append(f'<rect x="{x}" y="{cy}" width="{table_w}" height="{HDR_H}" fill="{ROW_ALT}"/>')
         els.append(f'<line x1="{x}" y1="{cy+HDR_H}" x2="{x+table_w}" y2="{cy+HDR_H}" '
                    f'stroke="{BORDER}" stroke-width="1"/>')
         els.append(
@@ -128,139 +129,115 @@ def build_table(els, x, y, table_w, sections):
         cy += HDR_H
 
         for idx_r, (key, val) in enumerate(rows):
-            # Alternate row bg
-            if idx_r % 2 == 0:
-                els.append(f'<rect x="{x}" y="{cy}" width="{table_w}" height="{ROW_H}" fill="{BG}"/>')
-            else:
-                els.append(f'<rect x="{x}" y="{cy}" width="{table_w}" height="{ROW_H}" fill="{ROW_ALT}"/>')
-
-            # Row bottom border
+            row_bg = BG if idx_r % 2 == 0 else ROW_ALT
+            els.append(f'<rect x="{x}" y="{cy}" width="{table_w}" height="{ROW_H}" fill="{row_bg}"/>')
             els.append(f'<line x1="{x}" y1="{cy+ROW_H}" x2="{x+table_w}" y2="{cy+ROW_H}" '
                        f'stroke="{BORDER}" stroke-width="0.5"/>')
-
-            # Key column divider
             els.append(f'<line x1="{x+KEY_W}" y1="{cy}" x2="{x+KEY_W}" y2="{cy+ROW_H}" '
                        f'stroke="{BORDER}" stroke-width="0.5"/>')
-
-            # Key text
             els.append(
                 f'<text x="{x+10}" y="{cy+ROW_H-7}" font-family="{FONT}" font-size="{FS}" '
                 f'fill="{ACCENT1}" xml:space="preserve">{esc(key)}</text>'
             )
-            # Value text
             els.append(
                 f'<text x="{x+KEY_W+10}" y="{cy+ROW_H-7}" font-family="{FONT}" font-size="{FS}" '
                 f'fill="{FG}" xml:space="preserve">{esc(val)}</text>'
             )
             cy += ROW_H
 
-    return cy  # bottom of table
+    return cy
+
 
 def build_svg(stats):
     els = []
-    art_lines = ASCII_ART.split("\n")
-    art_h     = len(art_lines) * ART_LH + PAD * 2
 
-    # Tables data
     left_sections = [
-        ("System", [
-            ("OS",   INFO["OS"]),
-            ("Host", INFO["Host"]),
-            ("IDE",  INFO["IDE"]),
+        ("Stack", [
+            ("Frameworks", "PyTorch, Transformers, LangChain"),
+            ("Tooling",    "scikit-learn, NumPy, Pandas"),
         ]),
-        ("Languages", [
-            ("Languages.Code",   INFO["Languages.Code"]),
-            ("Languages.Markup", INFO["Languages.Markup"]),
-            ("Languages.Real",   INFO["Languages.Real"]),
-        ]),
-        ("Hobbies", [
-            ("Hobbies.Software", INFO["Hobbies.Software"]),
-            ("Hobbies.Other",    INFO["Hobbies.Other"]),
-        ]),
-        ("Interests", [
-            ("Interests.Subjective", INFO["Interests.Subjective"]),
-            ("Interests.Other",      INFO["Interests.Other"]),
+        ("Currently working on", [
+            ("Repo",     stats["latest_repo"]),
+            ("Language", stats["latest_lang"]),
+            ("Stars",    str(stats["latest_stars"])),
+            ("Pushed",   stats["latest_pushed"]),
         ]),
     ]
 
     right_sections = [
         ("Contact", [
-            ("Contact.Discord", INFO["Contact.Discord"]),
-            ("Contact.Steam",   INFO["Contact.Steam"]),
-            ("Contact.Xbox",    INFO["Contact.Xbox"]),
-            ("Contact.Other",   INFO["Contact.Other"]),
+            ("Email",  "shreyan(dot)chaubey@gmail(dot)com"),
+            ("GitHub", f"github.com/{GITHUB_USERNAME}"),
         ]),
-        ("GitHub Stats", [
-            ("Repos",     str(stats["repos"])),
-            ("Stars",     str(stats["stars"])),
-            ("Forks",     str(stats["forks"])),
-            ("Commits",   str(stats["commits"])),
-            ("Followers", str(stats["followers"])),
-            ("Following", str(stats["following"])),
+        ("Stats", [
+            ("Repos",   str(stats["repos"])),
+            ("Stars",   str(stats["stars"])),
+            ("Forks",   str(stats["forks"])),
+            ("Commits", str(stats["commits"])),
         ]),
     ]
 
-    # Geometry
-    col_gap  = PAD
-    table_y  = art_h + TITLE_H + PAD
-    table_w  = (W - PAD * 2 - col_gap) // 2
-    col1_x   = PAD
-    col2_x   = PAD + table_w + col_gap
+    col_gap = PAD
+    table_w = (W - PAD * 2 - col_gap) // 2
+    col1_x  = PAD
+    col2_x  = PAD + table_w + col_gap
+    table_y = HEADER_H + PAD
 
-    # Estimate height
     def table_h(sections):
-        h = 0
-        for sec, rows in sections:
-            h += HDR_H + ROW_H * len(rows)
-        return h
+        return sum(HDR_H + ROW_H * len(rows) for _, rows in sections)
 
-    left_h  = table_h(left_sections)
-    right_h = table_h(right_sections)
-    swatch_h = 30
-    H = art_h + TITLE_H + PAD + max(left_h, right_h) + swatch_h + PAD * 2
+    tables_bottom = table_y + max(table_h(left_sections), table_h(right_sections))
+    poem_divider_y = tables_bottom + PAD
+    poem_top = poem_divider_y + PAD
+    poem_rows = 3 + len(POEM_LINES)   # title, author, blank gap, then each line
+    H = poem_top + poem_rows * POEM_LH + PAD
 
     # Background + outer border
     els.append(f'<rect width="{W}" height="{H}" rx="10" fill="{BG}"/>')
     els.append(f'<rect width="{W}" height="{H}" rx="10" fill="none" stroke="{BORDER}" stroke-width="1.5"/>')
 
-    # Divider between art and info
-    els.append(f'<line x1="{PAD}" y1="{art_h}" x2="{W-PAD}" y2="{art_h}" stroke="{BORDER}" stroke-width="1"/>')
-
-    # Art
-    ay = PAD + ART_LH
-    for line in art_lines:
-        els.append(
-            f'<text x="{PAD}" y="{ay}" font-family="{FONT}" font-size="{ART_FS}" '
-            f'fill="{ACCENT1}" xml:space="preserve">{esc(line)}</text>'
-        )
-        ay += ART_LH
-
-    # Title bar
-    ty = art_h + PAD + 16
+    # Header: username + sync timestamp, divider below
     els.append(
-        f'<text x="{col1_x}" y="{ty}" font-family="{FONT}" font-size="13" xml:space="preserve">'
+        f'<text x="{PAD}" y="{PAD+18}" font-family="{FONT}" font-size="16" xml:space="preserve">'
         f'<tspan fill="{ACCENT2}" font-weight="bold">{esc(GITHUB_USERNAME)}</tspan>'
         f'<tspan fill="{DIM}">@github</tspan></text>'
     )
     ts = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     els.append(
-        f'<text x="{col2_x}" y="{ty}" font-family="{FONT}" font-size="12" '
-        f'fill="{DIM}" xml:space="preserve">synced: {esc(ts)}</text>'
+        f'<text x="{W-PAD}" y="{PAD+18}" font-family="{FONT}" font-size="12" '
+        f'fill="{DIM}" text-anchor="end" xml:space="preserve">synced {esc(ts)}</text>'
     )
+    els.append(f'<line x1="{PAD}" y1="{HEADER_H}" x2="{W-PAD}" y2="{HEADER_H}" stroke="{BORDER}" stroke-width="1"/>')
 
-    # Draw tables
     build_table(els, col1_x, table_y, table_w, left_sections)
-    right_bottom = build_table(els, col2_x, table_y, table_w, right_sections)
+    build_table(els, col2_x, table_y, table_w, right_sections)
 
-    # Colour swatch under right table
-    px = col2_x
-    sw_y = right_bottom + 10
-    for color in ["#ff5f56","#ffbd2e","#27c93f","#1d76fd","#b479e8","#e8943a","#57c464","#8b949e"]:
-        els.append(f'<rect x="{px}" y="{sw_y}" width="22" height="14" rx="3" fill="{color}"/>')
-        px += 26
+    # Poem section: centered, below the tables
+    els.append(f'<line x1="{PAD}" y1="{poem_divider_y}" x2="{W-PAD}" y2="{poem_divider_y}" '
+               f'stroke="{BORDER}" stroke-width="1"/>')
+
+    cx = W // 2
+
+    def poem_baseline(row_idx):
+        return poem_top + row_idx * POEM_LH + (POEM_LH - 6)
+
+    els.append(
+        f'<text x="{cx}" y="{poem_baseline(0)}" font-family="{FONT}" font-size="15" '
+        f'fill="{ACCENT2}" font-weight="bold" text-anchor="middle" xml:space="preserve">{esc(POEM_TITLE)}</text>'
+    )
+    els.append(
+        f'<text x="{cx}" y="{poem_baseline(1)}" font-family="{FONT}" font-size="11" '
+        f'fill="{DIM}" font-style="italic" text-anchor="middle" xml:space="preserve">{esc(POEM_AUTHOR)}</text>'
+    )
+    for i, line in enumerate(POEM_LINES):
+        els.append(
+            f'<text x="{cx}" y="{poem_baseline(3 + i)}" font-family="{FONT}" font-size="{POEM_FS}" '
+            f'fill="{FG}" font-style="italic" text-anchor="middle" xml:space="preserve">{esc(line)}</text>'
+        )
 
     inner = "\n  ".join(els)
     return f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">\n  {inner}\n</svg>'
+
 
 if __name__ == "__main__":
     print("Fetching stats...")
