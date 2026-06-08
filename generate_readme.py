@@ -5,6 +5,8 @@ import datetime
 GITHUB_USERNAME = "thethinkmachine"
 GITHUB_TOKEN    = os.environ.get("GITHUB_TOKEN", "")
 
+HF_USERNAME     = "thethinkmachine"
+
 # ── Styling ───────────────────────────────────────────────────────────────────
 FONT      = "monospace"
 BG        = "#0d1117"
@@ -106,6 +108,18 @@ def fetch_stats():
     )
 
 
+def fetch_hf_stats():
+    def count(repo_type):
+        r = requests.get(f"https://huggingface.co/api/{repo_type}?author={HF_USERNAME}&limit=100")
+        return len(r.json()) if r.ok else "?"
+
+    return dict(
+        hf_models   = count("models"),
+        hf_datasets = count("datasets"),
+        hf_spaces   = count("spaces"),
+    )
+
+
 def build_table(els, x, y, table_w, sections):
     """
     Draw a bordered table with section headers and key/value rows.
@@ -156,20 +170,25 @@ def build_svg(stats):
             ("Frameworks", "PyTorch, Transformers, LangChain"),
             ("Tooling",    "scikit-learn, NumPy, Pandas"),
         ]),
+        ("Contact", [
+            ("Email",  "shreyan(dot)chaubey@gmail(dot)com"),
+            ("GitHub", f"github.com/{GITHUB_USERNAME}"),
+        ]),
+        ("Hugging Face", [
+            ("Models",   str(stats["hf_models"])),
+            ("Datasets", str(stats["hf_datasets"])),
+            ("Spaces",   str(stats["hf_spaces"])),
+        ]),
+    ]
+
+    right_sections = [
         ("Currently working on", [
             ("Repo",     stats["latest_repo"]),
             ("Language", stats["latest_lang"]),
             ("Stars",    str(stats["latest_stars"])),
             ("Pushed",   stats["latest_pushed"]),
         ]),
-    ]
-
-    right_sections = [
-        ("Contact", [
-            ("Email",  "shreyan(dot)chaubey@gmail(dot)com"),
-            ("GitHub", f"github.com/{GITHUB_USERNAME}"),
-        ]),
-        ("Stats", [
+        ("GitHub Stats", [
             ("Repos",   str(stats["repos"])),
             ("Stars",   str(stats["stars"])),
             ("Forks",   str(stats["forks"])),
@@ -242,6 +261,7 @@ def build_svg(stats):
 if __name__ == "__main__":
     print("Fetching stats...")
     stats = fetch_stats()
+    stats.update(fetch_hf_stats())
     print(stats)
     svg = build_svg(stats)
     os.makedirs("assets", exist_ok=True)
