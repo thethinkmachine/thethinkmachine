@@ -9,13 +9,13 @@ HF_USERNAME     = "thethinkmachine"
 
 # ── Styling ───────────────────────────────────────────────────────────────────
 FONT      = "monospace"
-BG        = "#0d1117"
-BORDER    = "#30363d"
-ROW_ALT   = "#161b22"   # alternating row bg
-ACCENT1   = "#e8943a"   # orange — section headers / keys
-ACCENT2   = "#57c464"   # green  — username / highlight
-DIM       = "#8b949e"   # grey   — secondary text
-FG        = "#c9d1d9"   # white  — values
+BG        = "#0a0e16"   # near-black navy
+BORDER    = "#262b3a"   # cool slate border
+ROW_ALT   = "#11151f"   # alternating row bg
+ACCENT1   = "#cdfa4e"   # lime green — section headers / keys (Marathon wordmark)
+ACCENT2   = "#5fd4f0"   # cyan       — username / highlight
+DIM       = "#7c8696"   # cool grey  — secondary text
+FG        = "#dde3ec"   # cool white — values
 
 W         = 920
 PAD       = 24
@@ -138,7 +138,7 @@ def build_table(els, x, y, table_w, sections):
                    f'stroke="{BORDER}" stroke-width="1"/>')
         els.append(
             f'<text x="{x+10}" y="{cy+HDR_H-8}" font-family="{FONT}" font-size="{FS}" '
-            f'fill="{ACCENT1}" font-weight="bold" xml:space="preserve">{esc(sec_name)}</text>'
+            f'fill="{ACCENT2}" font-weight="bold" xml:space="preserve">{esc(sec_name)}</text>'
         )
         cy += HDR_H
 
