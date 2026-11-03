@@ -22,7 +22,7 @@ PALETTES = {  # from the blog's CSS custom properties; cell alphas nudged up for
                   gold="154,106,16", gold_a=.18, blue="150,170,195", blue_a=.16),
 }
 
-W, PAD  = 600, 30
+W, PAD  = 900, 30             # as wide as the terminal card above it
 TEXT_W  = W - 2 * PAD - 34     # leaves room for the arrow
 CELL    = 8                    # the blog's grid: 8px pitch, 7px cells
 STEP    = 0.115                # ...and its tick
