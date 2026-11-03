@@ -98,6 +98,19 @@ ALERT   = "#ff6b6b"   # red — alerts, temperature spikes
 DIM     = "#7c8696"   # cool grey — secondary text
 FG      = "#dde3ec"   # cool white — body text
 
+# The card is drawn once per GitHub theme; the colors above are the dark one
+THEMES = {
+    "dark":  dict(BG=BG, PANEL=PANEL, GRID=GRID, BORDER=BORDER, ACCENT1=ACCENT1, ACCENT2=ACCENT2,
+                  ALERT=ALERT, DIM=DIM, FG=FG),
+    "light": dict(BG="#f8f9fb", PANEL="#eef1f5", GRID="#dde3ea", BORDER="#d0d7de", ACCENT1="#4d7c0f",
+                  ACCENT2="#0e7490", ALERT="#cf222e", DIM="#6e7781", FG="#1f2328"),
+}
+PROFILE_SVG = {"dark": "assets/profile.svg", "light": "assets/profile-light.svg"}
+
+
+def use_theme(name):
+    globals().update(THEMES[name])
+
 W       = 900
 PAD     = 32
 TITLE_H = 34
@@ -531,8 +544,14 @@ def build_readme(stats):
     post = stats["blog_post"]
     post_alt = html.escape(f"Latest from the notebook: {post['title']}. {post['description']}", quote=True)
     return (
+        # GitHub picks the <source> matching the viewer's GitHub theme
         '<p align="center">\n'
-        f'  <a href="{BLOG_URL}"><img src="assets/profile.svg" width="{W}" alt="{alt}" /></a>\n'
+        f'  <a href="{BLOG_URL}">\n'
+        '    <picture>\n'
+        f'      <source media="(prefers-color-scheme: dark)" srcset="{PROFILE_SVG["dark"]}" />\n'
+        f'      <img src="{PROFILE_SVG["light"]}" width="{W}" alt="{alt}" />\n'
+        '    </picture>\n'
+        '  </a>\n'
         '</p>\n'
         '\n'
         '<p align="center">\n'
@@ -542,7 +561,6 @@ def build_readme(stats):
         '  shreyan(dot)chaubey@gmail(dot)com\n'
         '</p>\n'
         '\n'
-        # GitHub picks the <source> matching the viewer's GitHub theme
         '<p align="center">\n'
         f'  <a href="{post["link"]}">\n'
         '    <picture>\n'
@@ -559,7 +577,10 @@ if __name__ == "__main__":
     stats = fetch_stats()
     print({k: v for k, v in stats.items() if k != "blog_post"})
     os.makedirs("assets", exist_ok=True)
-    outputs = {"assets/profile.svg": build_svg(stats), "README.md": build_readme(stats)}
+    outputs = {"README.md": build_readme(stats)}
+    for theme, path in PROFILE_SVG.items():
+        use_theme(theme)
+        outputs[path] = build_svg(stats)
     for theme in post_card.PALETTES:
         outputs[f"assets/latest-post-{theme}.svg"] = post_card.build_post_card(stats["blog_post"], theme)
     for path, content in outputs.items():

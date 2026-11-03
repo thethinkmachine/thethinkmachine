@@ -1,5 +1,10 @@
 <p align="center">
-  <a href="https://thethinkmachine.github.io"><img src="assets/profile.svg" width="900" alt="A terminal where a language model answers “who is thethinkmachine?”: Shreyan. Speaks formal languages, fluently, to no one. Builds experimental tools (they work on his machine). Thinks in automata, neural networks, generative models and the occasional LLM. Right now: probably running an experiment, or having an existential crisis. Usually both. Off the clock: hunter-gathering books and games he&#x27;ll never have time for, and occasionally music. Latest post: “What is a Convolution Anyway? (Part 1)” (4 months ago). Next one: eventually. On Hugging Face: 50 models, 15 datasets, 3 spaces." /></a>
+  <a href="https://thethinkmachine.github.io">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/profile.svg" />
+      <img src="assets/profile-light.svg" width="900" alt="A terminal where a language model answers “who is thethinkmachine?”: Shreyan. Speaks formal languages, fluently, to no one. Builds experimental tools (they work on his machine). Thinks in automata, neural networks, generative models and the occasional LLM. Right now: probably running an experiment, or having an existential crisis. Usually both. Off the clock: hunter-gathering books and games he&#x27;ll never have time for, and occasionally music. Latest post: “What is a Convolution Anyway? (Part 1)” (4 months ago). Next one: eventually. On Hugging Face: 50 models, 15 datasets, 3 spaces." />
+    </picture>
+  </a>
 </p>
 
 <p align="center">
