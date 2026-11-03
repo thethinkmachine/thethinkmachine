@@ -8,3 +8,12 @@
   <a href="https://github.com/thethinkmachine?tab=repositories">Repositories</a> ·
   shreyan(dot)chaubey@gmail(dot)com
 </p>
+
+<p align="center">
+  <a href="https://thethinkmachine.github.io/writing/convolution-part-1/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/latest-post-dark.svg" />
+      <img src="assets/latest-post-light.svg" width="600" alt="Latest from the notebook: What is a Convolution Anyway? (Part 1). From dot products to sliding filters, let us build convolutions from first principles." />
+    </picture>
+  </a>
+</p>

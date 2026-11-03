@@ -34,7 +34,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/profile.svg README.md
+          git add assets/*.svg README.md
           git diff --staged --quiet && exit 0
           git commit -m "chore: update profile SVG"
           git push

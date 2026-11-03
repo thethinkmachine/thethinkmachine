@@ -10,6 +10,8 @@ import xml.etree.ElementTree as ET
 
 import requests
 
+import post_card
+
 GITHUB_USERNAME = "thethinkmachine"
 HF_USERNAME     = "thethinkmachine"
 BLOG_URL        = "https://thethinkmachine.github.io"
@@ -183,8 +185,12 @@ def fetch_blog():
     try:
         r = requests.get(f"{BLOG_URL}/feed.xml", timeout=20)
         r.raise_for_status()
-        item = ET.fromstring(r.content).find("channel/item")
+        items = ET.fromstring(r.content).findall("channel/item")
+        item = items[0]
         published = email.utils.parsedate_to_datetime(item.findtext("pubDate"))
+        post = dict(title=item.findtext("title").strip(), description=item.findtext("description").strip(),
+                    topic=item.findtext("category") or "Notes", number=len(items), date=published,
+                    link=item.findtext("link").strip())
     except (requests.RequestException, ET.ParseError, AttributeError, TypeError, ValueError) as e:
         fail(f"{BLOG_URL}/feed.xml: {e}")
     # Coarse on purpose: a day-precise age would change the card (and commit) every day
@@ -196,8 +202,8 @@ def fetch_blog():
         age = "this month"
     else:
         age = f"{months} month{'s' * (months > 1)} ago"
-    return dict(blog_title=item.findtext("title").strip(), blog_age=age,
-                blog_date=published.strftime("%d %b %Y").lstrip("0"))
+    return dict(blog_title=post["title"], blog_age=age,
+                blog_date=published.strftime("%d %b %Y").lstrip("0"), blog_post=post)
 
 
 def chosen(cands):
@@ -522,6 +528,8 @@ def build_readme(stats):
             continue
         answer += (" " if tok["space"] and answer else "") + tok["text"].strip()
     alt = html.escape(f"A terminal where a language model answers “{SCRIPT['prompt']}”: {answer}", quote=True)
+    post = stats["blog_post"]
+    post_alt = html.escape(f"Latest from the notebook: {post['title']}. {post['description']}", quote=True)
     return (
         '<p align="center">\n'
         f'  <a href="{BLOG_URL}"><img src="assets/profile.svg" width="{W}" alt="{alt}" /></a>\n'
@@ -533,16 +541,28 @@ def build_readme(stats):
         f'  <a href="https://github.com/{GITHUB_USERNAME}?tab=repositories">Repositories</a> ·\n'
         '  shreyan(dot)chaubey@gmail(dot)com\n'
         '</p>\n'
+        '\n'
+        # GitHub picks the <source> matching the viewer's GitHub theme
+        '<p align="center">\n'
+        f'  <a href="{post["link"]}">\n'
+        '    <picture>\n'
+        '      <source media="(prefers-color-scheme: dark)" srcset="assets/latest-post-dark.svg" />\n'
+        f'      <img src="assets/latest-post-light.svg" width="{post_card.W}" alt="{post_alt}" />\n'
+        '    </picture>\n'
+        '  </a>\n'
+        '</p>\n'
     )
 
 
 if __name__ == "__main__":
     print("Fetching stats...")
     stats = fetch_stats()
-    print(stats)
+    print({k: v for k, v in stats.items() if k != "blog_post"})
     os.makedirs("assets", exist_ok=True)
-    with open("assets/profile.svg", "w", encoding="utf-8") as f:
-        f.write(build_svg(stats))
-    with open("README.md", "w", encoding="utf-8") as f:
-        f.write(build_readme(stats))
-    print("Written -> assets/profile.svg, README.md")
+    outputs = {"assets/profile.svg": build_svg(stats), "README.md": build_readme(stats)}
+    for theme in post_card.PALETTES:
+        outputs[f"assets/latest-post-{theme}.svg"] = post_card.build_post_card(stats["blog_post"], theme)
+    for path, content in outputs.items():
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content)
+    print("Written ->", ", ".join(outputs))
