@@ -8,6 +8,7 @@ import requests
 
 GITHUB_USERNAME = "thethinkmachine"
 HF_USERNAME     = "thethinkmachine"
+BLOG_URL        = "https://thethinkmachine.github.io"
 # Personal tokens make private repos/models count. Without them only public ones are
 # seen (the Actions GITHUB_TOKEN can't see other repos). Only counts are ever fetched.
 GH_STATS_TOKEN  = os.environ.get("GH_STATS_TOKEN", "")
@@ -488,10 +489,11 @@ def build_readme(stats):
     alt = html.escape(f"A terminal where a language model answers “{SCRIPT['prompt']}”: {answer}", quote=True)
     return (
         '<p align="center">\n'
-        f'  <img src="assets/profile.svg" width="{W}" alt="{alt}" />\n'
+        f'  <a href="{BLOG_URL}"><img src="assets/profile.svg" width="{W}" alt="{alt}" /></a>\n'
         '</p>\n'
         '\n'
         '<p align="center">\n'
+        f'  <a href="{BLOG_URL}">Blog</a> ·\n'
         f'  <a href="https://huggingface.co/{HF_USERNAME}">Hugging Face</a> ·\n'
         f'  <a href="https://github.com/{GITHUB_USERNAME}?tab=repositories">Repositories</a> ·\n'
         '  shreyan(dot)chaubey@gmail(dot)com\n'
