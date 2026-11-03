@@ -199,8 +199,15 @@ def fetch_blog():
         r = requests.get(f"{BLOG_URL}/feed.xml", timeout=20)
         r.raise_for_status()
         items = ET.fromstring(r.content).findall("channel/item")
-        item = items[0]
-        published = email.utils.parsedate_to_datetime(item.findtext("pubDate"))
+        if not items:
+            fail(f"{BLOG_URL}/feed.xml lists no posts")
+        # Newest by date, whatever order the feed lists posts in. Dates without a
+        # timezone ("-0000") come back naive; treat them as UTC.
+        dated = []
+        for i in items:
+            d = email.utils.parsedate_to_datetime(i.findtext("pubDate"))
+            dated.append((d if d.tzinfo else d.replace(tzinfo=datetime.timezone.utc), i))
+        published, item = max(dated, key=lambda d: d[0])
         post = dict(title=item.findtext("title").strip(), description=item.findtext("description").strip(),
                     topic=item.findtext("category") or "Notes", number=len(items), date=published,
                     link=item.findtext("link").strip())
