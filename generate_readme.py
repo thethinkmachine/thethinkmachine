@@ -1,8 +1,12 @@
+import datetime
+import email.utils
 import html
 import math
 import os
 import re
 import sys
+
+import xml.etree.ElementTree as ET
 
 import requests
 
@@ -36,6 +40,7 @@ SCRIPT = dict(
         "Right now: probably running an {experiment}, or having an existential crisis. Usually both. "
         "{!temp=1.9}Off the clock: {hoard} books and games he'll never have time for, "
         "{!temp=0.7}and occasionally music. "
+        "Latest post: “{blog_title}” ({blog_age}). Next one: {eta}. "
         "On Hugging Face: {hf_models} models, {hf_datasets} datasets, {hf_spaces} spaces{end}"
     ),
     candidates = {
@@ -47,6 +52,7 @@ SCRIPT = dict(
         "hoard":        [("reading", .61), ("collecting", .30), ("hunter-gathering", .02, True)],
         "end":          [(".", .91), (" like and subscribe", .04), ("…", .02)],
         "unedited":     [("unedited", .71), ("redacted", .22), ("translated", .02)],
+        "eta":          [("eventually", .47), ("soon", .38), ("next week", .02)],
     },
     alerts = {
         "cliche":        ("⚠ cliché detected", [("originality", "0.00"), ("action", "⌫ retracting")]),
@@ -56,7 +62,8 @@ SCRIPT = dict(
                                                                ("action", "⌫ delete everything")]),
     },
     live_notes = {
-        "hf_models": ["{hf_models_private} private, for their own protection"],
+        "hf_models":  ["{hf_models_private} private, for their own protection"],
+        "blog_title": ["from feed.xml · {blog_date}"],
     },
     summary = [
         ("hallucinations", "1 (caught)"),
@@ -167,7 +174,30 @@ def fetch_stats():
         items = get_json(f"https://huggingface.co/api/{repo_type}?author={HF_USERNAME}&limit=1000", hf_headers)
         stats[f"hf_{repo_type}"] = len(items)
         stats[f"hf_{repo_type}_private"] = sum(i.get("private", False) for i in items)
+    stats.update(fetch_blog())
     return stats
+
+
+def fetch_blog():
+    """Latest post from the blog's RSS feed: its title, a coarse age and its date."""
+    try:
+        r = requests.get(f"{BLOG_URL}/feed.xml", timeout=20)
+        r.raise_for_status()
+        item = ET.fromstring(r.content).find("channel/item")
+        published = email.utils.parsedate_to_datetime(item.findtext("pubDate"))
+    except (requests.RequestException, ET.ParseError, AttributeError, TypeError, ValueError) as e:
+        fail(f"{BLOG_URL}/feed.xml: {e}")
+    # Coarse on purpose: a day-precise age would change the card (and commit) every day
+    days = (datetime.datetime.now(datetime.timezone.utc) - published).days
+    months = days // 30
+    if days < 7:
+        age = "this week"
+    elif months < 1:
+        age = "this month"
+    else:
+        age = f"{months} month{'s' * (months > 1)} ago"
+    return dict(blog_title=item.findtext("title").strip(), blog_age=age,
+                blog_date=published.strftime("%d %b %Y").lstrip("0"))
 
 
 def chosen(cands):
@@ -196,7 +226,11 @@ def tokenize(script, stats):
         elif tok.startswith("{"):
             slot = tok[1:-1]
             if slot in stats:
-                tokens.append(dict(text=str(stats[slot]), kind="live", slot=slot, space=space, group=group))
+                # Multi-word values (blog titles) wrap word by word; only the first opens a panel
+                full = str(stats[slot])
+                for w, word in enumerate(full.split()):
+                    tokens.append(dict(text=word, kind="live" if w == 0 else "live_cont", slot=slot,
+                                       full=full, space=space or w > 0, group=group))
             else:
                 tokens.append(dict(text=chosen(script["candidates"][slot])[0], kind="sampled",
                                    slot=slot, space=space, group=group))
@@ -240,7 +274,7 @@ def layout(tokens, t):
             line, col, gap = line + 1, 0, 0
         max_line = max(max_line, line)
         p = dict(tok, col=col + gap, gap=gap, line=line, hide=None, erased=False)
-        if tok["kind"] != "plain":
+        if tok["kind"] in ("sampled", "live"):
             panels.append(dict(kind=tok["kind"], slot=tok["slot"], start=t, token=p))
             t += SAMPLE_PAUSE if tok["kind"] == "sampled" else LIVE_PAUSE
         p["reveal"] = t
@@ -331,7 +365,8 @@ def build_panels(els, tl, panels, end, panel_y, stats, sv):
 
         tok = ev["token"]
         if ev["kind"] == "live":
-            rows = [(tok["text"], 1.0, True)]
+            label = tok["full"] if len(tok["full"]) <= 28 else tok["full"][:27] + "…"
+            rows = [(label, 1.0, True)]
         else:
             cands = SCRIPT["candidates"][ev["slot"]]
             pick = chosen(cands)
@@ -420,7 +455,7 @@ def build_svg(stats):
     # Each act: its prompt typed one character at a time, then its tokens. Only act one's
     # surviving text is visible by default, so the static fallback is the finished bio.
     els.append(text(PAD, PROMPT_Y, ">>>", ACCENT1, anim=tl.visible("opacity", PROMPT_START, end), fit=True))
-    colors = {"plain": FG, "sampled": ACCENT2, "live": ACCENT1}
+    colors = {"plain": FG, "sampled": ACCENT2, "live": ACCENT1, "live_cont": ACCENT1}
     xs, ys = [], []
     for a, (act_prompt, start, act) in enumerate(acts):
         act_end = acts[a + 1][1] if a + 1 < len(acts) else end
