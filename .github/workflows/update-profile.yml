@@ -5,6 +5,9 @@ on:
     - cron: "0 6 * * *"   # every day at 06:00 UTC
   workflow_dispatch:        # manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,12 +26,15 @@ jobs:
       - name: Generate SVG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}   # personal token: counts private repos/commits
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}               # read token: counts private models/datasets
         run: python generate_readme.py
 
       - name: Commit & push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/profile.svg
-          git diff --staged --quiet || git commit -m "chore: update profile SVG"
+          git add assets/profile.svg README.md
+          git diff --staged --quiet && exit 0
+          git commit -m "chore: update profile SVG"
           git push
