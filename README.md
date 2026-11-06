@@ -18,7 +18,7 @@
   <a href="https://thethinkmachine.github.io/writing/convolution-part-1/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/latest-post-dark.svg" />
-      <img src="assets/latest-post-light.svg" width="900" alt="Latest from the notebook: What is a Convolution Anyway? (Part 1). From dot products to sliding filters, let us build convolutions from first principles." />
+      <img src="assets/latest-post-light.svg" width="900" alt="Latest from the notebook: What is a Convolution Anyway? (Part 1). From photons on the retina to a matrix multiplication: rebuilding the convolution from first principles." />
     </picture>
   </a>
 </p>

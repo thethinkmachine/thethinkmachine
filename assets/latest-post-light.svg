@@ -10,7 +10,7 @@
   <text x="870" y="42" text-anchor="end" font-family="Inter" font-size="9.5" letter-spacing="1.14"><tspan fill="#948b78">Nº 001   ·   18.VI.2026   ·   </tspan><tspan fill="#9a6a10">DEEP LEARNING</tspan></text>
   <rect x="16" y="64" width="2" height="32" fill="#9a6a10"/>
   <text x="30" y="90" font-family="Cormorant" font-weight="500" font-size="30" fill="#1c1a15">What is a Convolution Anyway? (Part 1)</text>
-  <text x="30" y="120" font-family="Garamond" font-size="16" fill="#6c6557">From dot products to sliding filters, let us build convolutions from first principles.</text>
+  <text x="30" y="120" font-family="Garamond" font-size="16" fill="#6c6557">From photons on the retina to a matrix multiplication: rebuilding the convolution from first principles.</text>
   <line x1="30" y1="138" x2="870" y2="138" stroke="rgba(28,26,21,.1)"/>
   <circle cx="33" cy="156.5" r="3" fill="#9a6a10"><animate attributeName="opacity" values="1;.25;1" dur="2.4s" repeatCount="indefinite"/></circle>
   <text x="44" y="160" font-family="Inter" font-size="9.5" letter-spacing="1.14" fill="#948b78">NOW</text>
