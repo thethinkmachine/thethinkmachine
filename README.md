@@ -2,7 +2,7 @@
   <a href="https://thethinkmachine.github.io">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/profile.svg" />
-      <img src="assets/profile-light.svg" width="900" alt="A terminal where a language model answers “who is thethinkmachine?”: Shreyan. Speaks formal languages, fluently, to no one. Builds experimental tools (they work on his machine). Thinks in automata, neural networks, generative models and the occasional LLM. Right now: probably running an experiment, or having an existential crisis. Usually both. Off the clock: hunter-gathering books and games he&#x27;ll never have time for, and occasionally music. Latest post: “What is a Convolution Anyway? (Part 1)” (4 months ago). Next one: eventually. On Hugging Face: 50 models, 15 datasets, 3 spaces." />
+      <img src="assets/profile-light.svg" width="900" alt="A terminal where a language model answers “who is thethinkmachine?”: Shreyan. Speaks formal languages, fluently, to no one. Builds experimental tools (they work on his machine). Thinks in automata, neural networks, generative models and the occasional LLM. Right now: probably running an experiment, or having an existential crisis. Usually both. Off the clock: hunter-gathering books and games he&#x27;ll never have time for, and occasionally music. Latest post: “What is a Convolution Anyway? (Part 2)” (this week). Next one: eventually. On Hugging Face: 50 models, 15 datasets, 3 spaces." />
     </picture>
   </a>
 </p>
@@ -15,10 +15,10 @@
 </p>
 
 <p align="center">
-  <a href="https://thethinkmachine.github.io/writing/convolution-part-1/">
+  <a href="https://thethinkmachine.github.io/writing/convolution-part-2/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="assets/latest-post-dark.svg" />
-      <img src="assets/latest-post-light.svg" width="900" alt="Latest from the notebook: What is a Convolution Anyway? (Part 1). From photons on the retina to a matrix multiplication: rebuilding the convolution from first principles." />
+      <img src="assets/latest-post-light.svg" width="900" alt="Latest from the notebook: What is a Convolution Anyway? (Part 2). From a three-pixel window to a whole cat: how receptive fields grow, and how one layer learns to look for many things at once." />
     </picture>
   </a>
 </p>
